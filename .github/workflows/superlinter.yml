@@ -14,8 +14,9 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout code (mine)
+        # try with org local version (just cloned)
+        uses: afineoldwine/checkout@v2
 
       # Runs the Super-Linter action
       - name: Run Super-Linter
