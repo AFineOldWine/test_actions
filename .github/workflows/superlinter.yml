@@ -15,12 +15,13 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code (mine)
-        # try with org local version (just cloned)
+        # try with org local version (just forked)
         uses: afineoldwine/checkout@v2
 
       # Runs the Super-Linter action
       - name: Run Super-Linter
-        uses: github/super-linter@v3
+        # try with org local version (just forked)
+        uses: afineoldwine/super-linter@v3
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
